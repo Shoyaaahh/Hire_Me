@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimaculangan John Mark M. | Personal Page</title>
+  <meta
+    name="description"
+    content="Meet Dimaculangan John Mark M., an IT student with strengths in problem analysis, communication, and leadership."
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <!-- BOOT SCREEN -->
+  <div class="boot-screen" id="bootScreen">
+    <div class="boot-panel" role="dialog" aria-modal="true" aria-labelledby="bootTitle">
+      <p class="boot-kicker">A PERSONAL PAGE</p>
+      <h1 class="boot-title" id="bootTitle">Hello, I’m John Mark.</h1>
+      <p class="boot-welcome">A little about what I’m learning, what I value, and how I work with others.</p>
+      <button class="boot-button" id="bootButton" type="button">Come on in</button>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Dimax<span class="accent-dot">.</span></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-me">Why Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PROFILE / HERO -->
+  <header id="home" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <p class="eyebrow mb-3">IT-SM 3102</p>
+          <h1 class="hero-name mb-3">Dimaculangan<br />John Mark M.</h1>
+          <p class="hero-tagline mb-4">IT student | Problem-solver | Team leader</p>
+          <p class="hero-intro mb-4">
+            I am an optimistic IT student who enjoys analyzing problems, communicating
+            ideas, and helping a team move forward. I bring initiative, a collaborative
+            mindset, and a positive attitude to the work I take on.
+          </p>
+          <a href="#background" class="btn btn-accent px-4 py-2">View my background</a>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center">
+          <div class="profile-frame mx-auto">
+            <img
+              class="profile-img"
+              src="images/profile.png"
+              alt="Dimaculangan John Mark M."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="section-block">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <p class="eyebrow mb-2">About</p>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="col-lg-8">
+          <p class="about-text">
+            I approach challenges with optimism and persistence. I value creating a
+            supportive environment where people feel included, and I enjoy bringing
+            positive energy to the groups I work with.
+          </p>
+          <p class="about-text">
+            My leadership style is hands-on: I take initiative, support my teammates, and
+            contribute to shared goals. I am continuing to build my skills as an IT
+            student and welcome opportunities to learn through collaboration and
+            practical work.
+          </p>
+
+          <div class="row row-cols-1 row-cols-sm-3 g-3 mt-4">
+            <div class="col">
+              <div class="info-card p-3">
+                <span class="info-label">Course / Section</span>
+                <span class="info-value">IT-SM 3102</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="info-card p-3">
+                <span class="info-label">Strength</span>
+                <span class="info-value">Leadership</span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="info-card p-3">
+                <span class="info-label">Vibe</span>
+                <span class="info-value">Optimistic &amp; Funny</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS / INTERESTS -->
+  <section id="skills" class="section-block section-alt">
+    <div class="container">
+      <p class="eyebrow mb-2">What I Bring</p>
+      <h2 class="section-title mb-3">Skills</h2>
+      <p class="about-text skills-intro mb-5">
+        I am building my foundation as an Information Technology student while bringing
+        strengths in problem-solving, communication, and teamwork to every opportunity.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <article class="skill-card h-100 p-4">
+            <h3 class="skill-title">Problem Analysis</h3>
+            <ul class="skill-list">
+              <li><strong>Break problems down:</strong> Identify the main issue before deciding what to do.</li>
+              <li><strong>Practical thinking:</strong> Look for clear, useful steps toward a solution.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="skill-card h-100 p-4">
+            <h3 class="skill-title">Communication</h3>
+            <ul class="skill-list">
+              <li><strong>Presenting ideas:</strong> Explain a point clearly in discussions and presentations.</li>
+              <li><strong>Listening:</strong> Make space for other perspectives and keep conversations respectful.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="skill-card h-100 p-4">
+            <h3 class="skill-title">Leadership &amp; Teamwork</h3>
+            <ul class="skill-list">
+              <li><strong>Taking initiative:</strong> Step up and contribute instead of waiting to be told what to do.</li>
+              <li><strong>Supporting the team:</strong> Help teammates and work toward shared goals.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="skill-card h-100 p-4">
+            <h3 class="skill-title">Learning &amp; Adaptability</h3>
+            <ul class="skill-list">
+              <li><strong>Open to feedback:</strong> Use suggestions and new experiences to improve.</li>
+              <li><strong>Growing in IT:</strong> Build knowledge and practical skills through ongoing study.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-5">
+        <span class="badge interest-badge">
+          <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 9h10a4 4 0 0 1 3.8 5.2l-.7 2.2a2 2 0 0 1-3.2 1l-2.1-1.6H9.2l-2.1 1.6a2 2 0 0 1-3.2-1l-.7-2.2A4 4 0 0 1 7 9Z" />
+            <path d="M8 11v4m-2-2h4m6-1h.01M18 14h.01" />
+          </svg>
+          Strategy Games
+        </span>
+        <span class="badge interest-badge">
+          <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 19 6-10 4 6 3-4 5 8H3Z" />
+            <path d="m7 13 2 2 2-1m4 0 1 2" />
+          </svg>
+          Hiking
+        </span>
+        <span class="badge interest-badge">
+          <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m21 3-7.5 18-3.2-7.3L3 10.5 21 3Z" />
+            <path d="m10.3 13.7 4.2-4.2" />
+          </svg>
+          Traveling Far
+        </span>
+        <span class="badge interest-badge">
+          <svg class="interest-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 10 4 4l6 3h4l6-3-1 6a8 8 0 1 1-14 0Z" />
+            <path d="M9 12h.01M15 12h.01M9 16c1.7 1.3 4.3 1.3 6 0" />
+          </svg>
+          Cats
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION / RELEVANT BACKGROUND -->
+  <section id="background" class="section-block">
+    <div class="container">
+      <p class="eyebrow mb-2 text-center">Education &amp; Experience</p>
+      <h2 class="section-title text-center mb-5">Relevant Background</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-6">
+          <article class="background-card h-100 p-4">
+            <h3 class="skill-title">Education</h3>
+            <p class="background-label">Current field of study</p>
+            <p class="skill-text">Information Technology</p>
+            <p class="background-label mt-3">Course / section</p>
+            <p class="skill-text mb-0">IT-SM 3102</p>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="background-card h-100 p-4">
+            <h3 class="skill-title">Leadership &amp; Collaboration</h3>
+            <p class="skill-text">
+              I contribute to group work by taking initiative, supporting teammates, and
+              helping the team work toward shared goals.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH ME -->
+  <section id="why-me" class="section-block section-alt">
+    <div class="container">
+      <p class="eyebrow mb-2 text-center">What You Can Expect</p>
+      <h2 class="section-title text-center mb-3">Why Work With Me?</h2>
+      <p class="about-text why-me-intro text-center mx-auto mb-5">
+        I bring a positive attitude, a willingness to learn, and a team-first approach to
+        the work I do.
+      </p>
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-3">
+          <div class="why-card h-100 p-4">
+            <h3 class="why-title">Initiative</h3>
+            <p class="skill-text">I take action and look for ways to contribute.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="why-card h-100 p-4">
+            <h3 class="why-title">Teamwork</h3>
+            <p class="skill-text">I support others and focus on shared progress.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="why-card h-100 p-4">
+            <h3 class="why-title">Persistence</h3>
+            <p class="skill-text">I stay optimistic and keep working through challenges.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="why-card h-100 p-4">
+            <h3 class="why-title">Growth Mindset</h3>
+            <p class="skill-text">I am ready to learn, improve, and take on new challenges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-block section-alt">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <p class="eyebrow mb-2 text-center">Get In Touch</p>
+          <h2 class="section-title text-center mb-5">Contact Me</h2>
+
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Your full name" required />
+            </div>
+            <div class="mb-3">
+              <label for="emailAddress" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com" required />
+            </div>
+            <div class="mb-4">
+              <label for="messageBox" class="form-label">Message</label>
+              <textarea class="form-control" id="messageBox" rows="4" placeholder="Write your message here" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-accent px-5 py-2">Submit</button>
+            </div>
+            <p id="formNote" class="text-center mt-3" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="direct-contact text-center mt-5">
+            <p class="mb-1">Or reach me directly:</p>
+            <p class="mb-0">
+              <a href="mailto:24-37774@g.batstate-u.edu.ph">24-37774@g.batstate-u.edu.ph</a>
+              &nbsp;•&nbsp;
+              <a href="tel:+639930617064">0993 061 7064</a>
+            </p>
+            <p class="social-links mb-0 mt-2">
+              <a href="https://www.instagram.com/sho.4now/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+              &nbsp;•&nbsp;
+              <a href="https://www.facebook.com/Shoyaah" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 Dimaculangan, John Mark M. — IT-SM 3102</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="Script.js"></script>
+</body>
+</html>

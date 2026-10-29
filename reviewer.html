@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethics & Culture Reviewer</title>
+<style>
+  :root{
+    --bg: #14181c;
+    --bg-panel: #1b2127;
+    --bg-panel-2: #202730;
+    --text: #d8dee5;
+    --text-dim: #8b96a3;
+    --accent: #7fc9f5;       /* light blue highlight */
+    --accent-soft: rgba(127,201,245,0.14);
+    --accent-border: rgba(127,201,245,0.35);
+    --rule: #2a3138;
+    --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--serif);
+    line-height:1.65;
+    padding:0 0 80px 0;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 28px 0 28px;
+  }
+  header{
+    border-bottom:1px solid var(--rule);
+    padding-bottom:28px;
+    margin-bottom:36px;
+  }
+  header h1{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:2rem;
+    letter-spacing:-0.01em;
+    margin:0 0 6px 0;
+    color:#eef3f7;
+  }
+  header p{
+    font-family:var(--sans);
+    color:var(--text-dim);
+    margin:0;
+    font-size:0.95rem;
+  }
+  nav.toc{
+    font-family:var(--sans);
+    background:var(--bg-panel);
+    border:1px solid var(--rule);
+    border-radius:10px;
+    padding:18px 22px;
+    margin-bottom:44px;
+    font-size:0.9rem;
+  }
+  nav.toc div.toc-title{
+    color:var(--text-dim);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-size:0.72rem;
+    margin-bottom:10px;
+  }
+  nav.toc a{
+    color:var(--text);
+    text-decoration:none;
+    display:block;
+    padding:3px 0;
+    border-left:2px solid transparent;
+    padding-left:10px;
+  }
+  nav.toc a:hover{ border-left-color:var(--accent); color:var(--accent); }
+
+  section{ margin-bottom:52px; }
+  h2{
+    font-family:var(--sans);
+    font-size:1.35rem;
+    color:#eef3f7;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:10px;
+    margin:0 0 20px 0;
+  }
+  h3{
+    font-family:var(--sans);
+    font-size:1.02rem;
+    color:var(--accent);
+    margin:26px 0 10px 0;
+    font-weight:600;
+  }
+  h4{
+    font-family:var(--sans);
+    font-size:0.92rem;
+    color:var(--text);
+    margin:18px 0 8px 0;
+    font-weight:600;
+  }
+  p{ margin:0 0 14px 0; }
+  ul, ol{ margin:0 0 14px 0; padding-left:22px; }
+  li{ margin-bottom:7px; }
+  li > ul, li > ol{ margin-top:7px; }
+
+  .hl{
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:0.05em 0.35em;
+    border-radius:4px;
+    font-weight:600;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .term-card{
+    background:var(--bg-panel);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--accent-border);
+    border-radius:8px;
+    padding:14px 18px;
+    margin-bottom:16px;
+  }
+  .term-card .term{
+    font-family:var(--sans);
+    color:var(--accent);
+    font-weight:700;
+    font-size:0.95rem;
+    display:block;
+    margin-bottom:4px;
+  }
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  @media (max-width:600px){ .grid-2{ grid-template-columns:1fr; } }
+
+  .pill-box{
+    background:var(--bg-panel-2);
+    border:1px solid var(--rule);
+    border-radius:8px;
+    padding:16px 18px;
+  }
+  .pill-box h4{ margin-top:0; }
+
+  .kant-num{
+    display:flex;
+    gap:12px;
+    margin-bottom:14px;
+    align-items:baseline;
+  }
+  .kant-num .n{
+    font-family:var(--sans);
+    color:var(--accent);
+    font-weight:700;
+    min-width:1.4em;
+  }
+
+  .quote{
+    font-style:italic;
+    color:var(--text-dim);
+    border-left:2px solid var(--rule);
+    padding-left:14px;
+    margin:14px 0;
+  }
+
+  footer{
+    text-align:center;
+    color:var(--text-dim);
+    font-family:var(--sans);
+    font-size:0.8rem;
+    margin-top:60px;
+  }
+
+  a.top{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:0.78rem;
+    color:var(--text-dim);
+    text-decoration:none;
+    margin-top:6px;
+  }
+  a.top:hover{ color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Ethics & Culture — Reviewer</h1>
+    <p>Key concepts, branches, moral standards, dilemmas, Kantian ethics, taxation, and culture</p>
+  </header>
+
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <a href="#sec-ethics">1. What Is Ethics</a>
+    <a href="#sec-branches">2. Branches of Ethics</a>
+    <a href="#sec-standards">3. Moral vs. Non-Moral Standards</a>
+    <a href="#sec-develop">4. Developing Moral Standards</a>
+    <a href="#sec-dilemmas">5. Moral Dilemmas</a>
+    <a href="#sec-kant">6. Freedom & Kant's Philosophy</a>
+    <a href="#sec-tax">7. Taxation in the Philippines</a>
+    <a href="#sec-culture">8. Culture</a>
+    <a href="#sec-relativism">9. Cultural Relativism</a>
+  </nav>
+
+  <section id="sec-ethics">
+    <h2>1. What Is Ethics</h2>
+    <p>According to Leandro Jr. & Gubia-on (2018), <span class="hl">ethics or moral philosophy is concerned with what is morally good and evil, right and wrong</span>. The word comes from the Greek <span class="hl">"ethos"</span> — tradition, habit, character, or attitude. Ethics helps us determine what we should do and why we should do it.</p>
+
+    <h3>Ethics and Human Decision-Making</h3>
+    <p>Ethical principles such as <span class="hl">fairness, trustworthiness, and responsibility</span> guide us toward actions consistent with our sense of right and wrong, without compromising others' welfare.</p>
+
+    <h4>Ethics helps individuals:</h4>
+    <ul>
+      <li>Determine the difference between right and wrong</li>
+      <li>Eliminate actions that do not conform to ethical principles</li>
+      <li>Become more careful and responsible in decision-making</li>
+      <li>Develop good habits and character</li>
+      <li>Make rational decisions when facing ethical dilemmas</li>
+      <li>Become responsible members of family, school, and society</li>
+      <li>Become more sensitive to the needs of others</li>
+      <li>Understand their conscience and responsibility for their actions</li>
+    </ul>
+  </section>
+
+  <section id="sec-branches">
+    <h2>2. Branches of Ethics</h2>
+    <div class="term-card">
+      <span class="term">Normative Ethics</span>
+      Examines how human beings respond to moral questions and clarifies <span class="hl">what people should do</span> in interacting with others and society (Maboloc, 2012).
+      <ul>
+        <li><strong>Moral Philosophy</strong> — moral obligations, what people must do, how people should behave, the meaning and purpose of actions.</li>
+        <li><strong>Applied / Practical Ethics</strong> — applies moral principles to real-world issues (abortion, business, medicine, environment, technology).</li>
+      </ul>
+    </div>
+    <div class="term-card">
+      <span class="term">Meta-Ethics</span>
+      Examines <span class="hl">the meaning, interpretation, and justification of moral statements</span> (Maboloc, 2012).
+    </div>
+  </section>
+
+  <section id="sec-standards">
+    <h2>3. Moral vs. Non-Moral Standards</h2>
+    <div class="grid-2">
+      <div class="pill-box">
+        <h4>Moral Standards</h4>
+        Deal with actions that can <span class="hl">seriously harm or benefit</span> human beings and promote the common good.
+        <ul>
+          <li>Right and wrong</li>
+          <li>Serious harm or benefit</li>
+          <li>Justice and fairness</li>
+          <li>Human welfare</li>
+          <li>Common good</li>
+        </ul>
+      </div>
+      <div class="pill-box">
+        <h4>Non-Moral Standards</h4>
+        Regulate behavior but are <span class="hl">not necessarily based on moral considerations</span>.
+        <ul>
+          <li>Etiquette</li>
+          <li>Statutes</li>
+          <li>Professional codes</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Characteristics of Moral Standards</h3>
+    <ol>
+      <li><strong>Serious Harm or Benefit</strong> — involve actions that can seriously harm or benefit people.</li>
+      <li><strong>Not Determined Only by Authority</strong> — followed because an action is right or wrong, not simply because an authority says so.</li>
+      <li><strong>Prioritized Over Self-Interest</strong> — upheld even when they conflict with personal interests.</li>
+      <li><strong>Objective Considerations</strong> — decisions should be fair and impartial.</li>
+      <li><strong>Universal</strong> — expected to apply to everyone.</li>
+      <li><strong>Connected With Moral Feelings</strong> — violations may cause guilt, shame, regret, or disapproval.</li>
+    </ol>
+
+    <p><strong>Etiquette</strong> — conventional and socially accepted ways of behaving.<br>
+    <strong>Professional Code of Ethics</strong> — guidelines that help practitioners distinguish right from wrong and guide professional decision-making.</p>
+  </section>
+
+  <section id="sec-develop">
+    <h2>4. Developing Moral Standards</h2>
+    <p>According to Leandro Jr. & Gubia-on (2018), morals are shaped by an individual's <span class="hl">beliefs and values</span>, which develop into concrete rules regulating our actions.</p>
+    <p><strong>Moral standards are influenced by:</strong></p>
+    <ul>
+      <li>Upbringing</li>
+      <li>Character and manners</li>
+      <li>Religious values</li>
+      <li>School and education</li>
+      <li>People around us</li>
+      <li>Cultural norms</li>
+      <li>Life experiences</li>
+      <li>Critical thinking</li>
+    </ul>
+  </section>
+
+  <section id="sec-dilemmas">
+    <h2>5. Moral Dilemmas</h2>
+    <p>Per Kvalnes (2019), a <span class="hl">moral dilemma is a situation in which a decision-maker must give preference to one moral principle over another</span>.</p>
+    <h3>Key Characteristics</h3>
+    <ul>
+      <li><strong>Preference</strong> — choosing one moral value over another competing alternative.</li>
+      <li><strong>Equivalence</strong> — situations where moral values are of equal significance.</li>
+      <li><strong>Complexity</strong> — difficulty deciding between mutually contradictory choices.</li>
+      <li><strong>Urgency</strong> — struggling to decide when a moral choice is required immediately.</li>
+    </ul>
+
+    <h3>1. Organizational Ethical Dilemma</h3>
+    <p>Situations that cause an organization to respond negatively or positively to ethical issues affecting staff, shareholders, and society.</p>
+    <ul>
+      <li><strong>Unethical Leadership</strong> — leaders failing to act as moral examples</li>
+      <li><strong>Toxic Culture</strong> — lack of work-life balance and employee motivation</li>
+      <li><strong>Discrimination</strong> — harassment or employee favoritism within the hierarchy</li>
+      <li><strong>Unrealistic and Conflicting Goals</strong> — need for clear, realistic goals and teamwork</li>
+      <li><strong>Technology, Social Media & Privacy</strong> — proper use, productivity, privacy</li>
+      <li><strong>Business Travel Ethics</strong> — proper expenses, responsible use of company funds</li>
+    </ul>
+
+    <h3>2. Individual Dilemma</h3>
+    <p>Occurs when factors like <span class="hl">peer pressure, financial situation, and social status</span> influence a person's ethical standards.</p>
+
+    <h3>3–4. Structural Moral Dilemma</h3>
+    <p>Selecting a proper system of <span class="hl">responsibilities and relationships</span> — a continuing universal challenge. Five concepts to consider:</p>
+    <ol>
+      <li><strong>Differentiation vs. Integration</strong> — as tasks grow more complex, organizations struggle to coordinate jobs and activities, requiring better management and balance between rules and teamwork.</li>
+      <li><strong>Gap vs. Overlap</strong> — unclear job responsibilities cause missed tasks, conflicts, and duplicated work.</li>
+      <li><strong>Underload vs. Overload</strong> — too few or too many tasks both reduce productivity and quality.</li>
+      <li><strong>Lack of Clarity vs. Lack of Creativity</strong> — uncertainty about roles vs. strict rules that limit innovation.</li>
+      <li><strong>Excessive Autonomy vs. Excessive Interdependence</strong> — too much independence isolates people; too much connection wastes time on coordination.</li>
+    </ol>
+
+    <h4>Characteristics to Avoid Structural Moral Dilemmas</h4>
+    <ul>
+      <li>Well-distributed jobs with balanced laws, policies, rules, and regulations</li>
+      <li>Clearly defined job descriptions, roles, and duties</li>
+      <li>Clear expectations and tasks aligned with organizational goals</li>
+      <li>Balanced interdependence and coordination among employees</li>
+    </ul>
+  </section>
+
+  <section id="sec-kant">
+    <h2>6. Freedom as Foundation for Moral Acts (Kant)</h2>
+
+    <div class="kant-num"><span class="n">1</span><div><strong>Freedom</strong> — People are rational, autonomous beings who should make their own choices, but true freedom means <span class="hl">using reason, following moral principles, and respecting the equal freedom and dignity of others</span> — not doing whatever we want.
+      <ul>
+        <li>Use reason, not desire</li>
+        <li>Self-rule — follow moral laws we can rationally accept</li>
+        <li>Equal freedom — respecting others' freedom</li>
+        <li>Right to pursue happiness in one's own way</li>
+        <li>Equality & dignity for all</li>
+      </ul>
+    </div></div>
+
+    <div class="kant-num"><span class="n">2</span><div><strong>Morality</strong> — Based on reason and duty. The most important moral quality is a <span class="hl">good will</span> — the intention to do what is morally right.</div></div>
+
+    <div class="kant-num"><span class="n">3</span><div><strong>Good Will and Duty</strong> — Good will is always morally good, even if outcomes fail. Moral value comes from <span class="hl">acting out of duty</span>, not personal desires or expected outcomes.</div></div>
+
+    <div class="kant-num"><span class="n">4</span><div><strong>Perfect and Imperfect Duties</strong> — Perfect duties are strict and must always be followed (e.g. never lying). Imperfect duties allow flexibility (e.g. helping others when we can).</div></div>
+
+    <div class="kant-num"><span class="n">5</span><div><strong>Categorical Imperative</strong> — An <span class="hl">unconditional moral command</span> that applies regardless of personal desires, interests, or expected results.</div></div>
+
+    <div class="kant-num"><span class="n">6</span><div><strong>Universalizability</strong> — An action is morally acceptable only if the principle behind it can become a <span class="hl">universal law everyone can follow</span>.</div></div>
+
+    <div class="kant-num"><span class="n">7</span><div><strong>Humanity as an End in Itself</strong> — Human beings should always be treated as an <span class="hl">end, never simply as a means</span> to a goal.</div></div>
+
+    <div class="kant-num"><span class="n">8</span><div><strong>Justice and Fairness</strong> — Concerned with how people interact and each person's right to live as they see fit; based on <span class="hl">fair and voluntary relationships</span>, not personal desires or influence.
+      <ul>
+        <li>Justice involves external acts influencing others directly or indirectly</li>
+        <li>Justice does not affect others' desires, wishes, or needs</li>
+        <li>Justice concerns the nature of relationships, not their substance</li>
+      </ul>
+    </div></div>
+  </section>
+
+  <section id="sec-tax">
+    <h2>7. Taxation in the Philippines</h2>
+    <p>Taxation policy is regulated primarily by the <span class="hl">Constitution of the Philippines</span> and three Republic Acts.</p>
+    <ul>
+      <li><strong>Constitution</strong> — Article VI, Sec. 28: taxation should be uniform and equal, with a democratic system established by Congress.</li>
+      <li><strong>National Laws</strong> — National Internal Revenue Code (RA 8424) and later tax reform laws.</li>
+      <li><strong>Local Laws</strong> — RA 7160, the Local Government Code of 1991, allows LGUs to impose and collect certain taxes.</li>
+      <li><strong>Tax Collection</strong> — National taxes: <span class="hl">Bureau of Internal Revenue (BIR)</span>; Local taxes: <span class="hl">LGUs</span>.</li>
+    </ul>
+  </section>
+
+  <section id="sec-culture">
+    <h2>8. Culture</h2>
+    <ul>
+      <li><strong>Kohak (1984)</strong> — culture is at the root of human alienation from the environment; derives from Latin "cultus," meaning giving respect to the sacredness of all.</li>
+      <li><strong>Cole (2019)</strong> — <span class="hl">shared beliefs, values, language, behaviors, and material objects</span> that identify a group or society.</li>
+      <li><strong>Lederach (1995)</strong> — collective knowledge and schemes generated by a group to perceive, view, convey, and react to social realities.</li>
+      <li><strong>Zimmerman (2017)</strong> — characteristics and awareness of a specific community, including language, religion, food, social behavior, etiquette, fashion, music, and the arts.</li>
+    </ul>
+
+    <h3>How Culture Influences Moral Development</h3>
+    <ul>
+      <li><strong>Social and Communal</strong> — develops through relationships and shared experiences; passed between generations.</li>
+      <li><strong>Defines Principles and Behaviors</strong> — teaches what should be followed, maintained, or changed for the community's good.</li>
+      <li><strong>Sets Rules and Boundaries</strong> — establishes restrictions that guide behavior and provide protection.</li>
+      <li><strong>Shapes Character and Identity</strong> — influences character and moral development through rules, values, and traditions.</li>
+      <li><strong>Identifies Authorities</strong> — recognizes people/groups who create, interpret, and enforce rules.</li>
+    </ul>
+
+    <h3>Characteristics of Filipino Culture</h3>
+    <div class="grid-2">
+      <ul>
+        <li><span class="hl">Resilient</span> — strong and positive facing challenges</li>
+        <li><span class="hl">Family-Oriented</span> — family is a major priority</li>
+        <li><span class="hl">Religious</span> — values faith and practices</li>
+        <li><span class="hl">Respectful</span> — "po," "opo," pagmamano</li>
+        <li><span class="hl">Helpful / Bayanihan</span> — working together</li>
+      </ul>
+      <ul>
+        <li><span class="hl">Values Traditions</span> — celebrations, reunions, festivals</li>
+        <li><span class="hl">Loves Christmas</span> — parol, caroling, Misa de Gallo, Noche Buena</li>
+        <li><span class="hl">Appreciates Art & Architecture</span></li>
+        <li><span class="hl">Hospitable</span> — warmly welcomes guests</li>
+      </ul>
+    </div>
+
+    <h3>Weaknesses of Filipino Character</h3>
+    <ul>
+      <li><strong>Extreme Personalism</strong> — taking things personally based on feelings</li>
+      <li><strong>Extreme Family-Centeredness</strong> — protection that can become overprotection</li>
+      <li><strong>Lack of Discipline</strong> — poor time management, "palusot"</li>
+      <li><strong>Passivity and Lack of Initiative</strong> — "bahala na" attitude</li>
+      <li><strong>Colonial Mentality</strong> — preferring foreign over local products/culture</li>
+      <li><strong>Kanya-kanya Syndrome</strong> — self-serving behavior, "crab mentality"</li>
+      <li><strong>Lack of Self-Analysis and Reflection</strong> — limited self-evaluation</li>
+    </ul>
+
+    <div class="quote">Culture is the shared way of life of a group, including its beliefs, values, traditions, language, and behaviors. It defines our moral behavior by teaching the values, rules, and principles that guide how we think, decide, treat others, and judge right from wrong.</div>
+  </section>
+
+  <section id="sec-relativism">
+    <h2>9. Cultural Relativism</h2>
+    <p><span class="hl">No one can judge a society by their own standards</span> of right or wrong, eccentric or natural — people must understand other societies' cultures.</p>
+
+    <div class="grid-2">
+      <div class="pill-box">
+        <h4>Advantages</h4>
+        <ul>
+          <li>Creates learning opportunities that strengthen humanity</li>
+          <li>Eliminates the concept of "separate but equal"</li>
+          <li>Creates a system of niche expertise</li>
+          <li>Encourages respect</li>
+        </ul>
+      </div>
+      <div class="pill-box">
+        <h4>Disadvantages</h4>
+        <ul>
+          <li>Some actions defined as "violent," "unsafe," or "wrong" still occur</li>
+          <li>Assumes people are perfect</li>
+          <li>Creates personal bias</li>
+          <li>Eliminates the idea that reform/change can be good</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Conclusion</h3>
+    <p>Cultural relativism helps us understand and respect cultural differences. However, respecting other cultures <span class="hl">does not mean accepting harmful practices</span>. We should appreciate diversity while promoting human dignity, safety, fairness, and peaceful relationships.</p>
+  </section>
+
+  <footer>
+    Ethics & Culture Reviewer · Dark mode
+    <br><a class="top" href="#sec-ethics">↑ Back to top</a>
+  </footer>
+
+</div>
+</body>
+</html>
